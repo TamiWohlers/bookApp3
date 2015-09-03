@@ -13,12 +13,14 @@
     <div class="bookImage" ng-repeat="book in booksInCart">
         <img src='{{book.image}}'></img><br ng-show="(index+1)%3==0" />
         {{book.price}}
-        <button class="button" ng-click="deleteFromCart(book)">Delete</button>
+        <button class="button" ng-click="deleteFromCart(book)">Del
+        ete</button>
 </div> -->
-<div align="center" class="books"ng-repeat="cart in booksInCart">
+<div class="setRow">
+<div class="bookImage"ng-repeat="cart in booksInCart">
   <div class="shoppingCart">
   <img src='{{cart.image}}'>
-	{{cart.Title}} ${{cart.Price}}
+  <div>${{cart.price}}</div>
 	</div>
 	<div>
 	<button class="button" ng-click="deleteFromCart(cart)">Delete</button>
@@ -28,7 +30,7 @@
 <div class="total">
 Total = ${{total}}
 </div>
-<div></div>
+</div>
 <!-- <div>{{total}}</div> -->
 <!-- -->
 <!-- <p>This is test<p> -->

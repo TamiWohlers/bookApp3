@@ -4,12 +4,13 @@ app.controller('cartCtrl', function($scope, cartService, toReadService, homeServ
     $scope.getBooksInCart = function() {
         $scope.booksInCart = [];
         toReadService.getCartBooks().then(function(data) {
+            console.log(data);
             $scope.booksInCart = data;
             $scope.total = 0;
             for (var i = 0; i < $scope.booksInCart.length; i++) {
-                $scope.total = Math.round(($scope.total + $scope.booksInCart[i].Price) * 100) / 100;
+                $scope.total = Math.round(($scope.total + $scope.booksInCart[i].price) * 100) / 100;
             }
-
+            console.log($scope.total);
             console.log('in cartCtrl', data)
         })
     };

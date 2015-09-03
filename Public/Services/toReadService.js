@@ -6,11 +6,11 @@ app.service('toReadService', function($http, $q) {
     this.buildCart = function(book) {
         // console.log('in addToCart', book)
         // var dfd = $q.defer()
-        var cart = {};
-        cart.Product = "Book";
-        cart.Title = book.title;
-        cart.Price = book.price;
-        cart.image = book.image;
+        var cart = book;
+        // cart.Product = "Book";
+        // cart.Title = book.title;
+        // cart.Price = book.price;
+        // cart.image = book.image;
         console.log('cart', cart);
         // dfd.resolve(cart)
         // return dfd.promise;  

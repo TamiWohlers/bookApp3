@@ -59,7 +59,7 @@ app.controller('toReadCtrl', function($scope, toReadService, homeService) {
     }
 
     $scope.buildCart = function(book) {
-        console.log(book)
+        console.log('in buildCart $$$$$$$$$', book)
         var cart = toReadService.buildCart(book);
         toReadService.addToCart(cart).then(function(data) {
             console.log('cart', data)

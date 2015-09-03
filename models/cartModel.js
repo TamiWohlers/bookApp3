@@ -2,9 +2,10 @@ var mongoose = require('mongoose');
 
 var cartSchema = new mongoose.Schema({
 
-  Product: {type: String, unique: false, required: true, index: true},
-  Title: {type: String, required: true},
-  Price: {type: Number, required: true, min:.00}
+  Product: {type: String, unique: false, index: true},
+  title: {type: String, required: true},
+  price: {type: Number, required: true, min:.00},
+  image: {type: String}
 
   });
   // Quantity: {type: Number, required: true, min: 1 }

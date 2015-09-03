@@ -111,6 +111,9 @@ app.controller('homeCtrl', function($scope, homeService, haveReadService, $modal
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
+  $scope.searchKeyPress = function(e) {
+    $scope.searchKeyPress(e);   
+  }
 
 });
 

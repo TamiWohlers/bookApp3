@@ -1,5 +1,6 @@
 
 <html>
+
 <div class = "bookshelf"></div>
 <ul>
         <li><a href="/#/home">Home</a></li>
@@ -14,8 +15,12 @@
     <div><h4>To add book to currently reading, enter title and author below<h4></div>
     <!-- <button ng-click = "getAll()">Reload</button> -->
     <input class = "inputField"  placeholder="Book Title" type="text" ng-model="title"></input>
-    <input placeholder="author's name" type="text" ng-model="author"></input>
-    <button class = "button" ng-click="searchForBook(title, author)">Submit
+
+    <input input = "text" id="txtSearch" placeholder="author's name" type="text" ng-model="author"></input>
+    <!-- <input type="text" id="txtSearch" onkeypress="return searchForBook(title, author);" /> -->
+    <!-- <input type="button" id="btnSearch" Value="Search" onclick="searchForBook(title, author);" />
+ -->
+    <button class = "button" placeholder = "author name" ng-click="searchForBook(title, author)">Submit
     </button>
 </div>
 <div class="container">
@@ -28,7 +33,7 @@
     
     <div class="bookImage" ng-repeat="(index, book) in currentFaves">
         <img src='{{book.image}}'><!-- <br ng-show="(index+1)%3==0" /> -->
-        <button class="button" ng-click="open()">Write Review</button>
+        <button class="button" ng-click="open();reviewNotFinished=false">Write Review</button>
         <button class="button" ng-click="finishedBook(book, bookReviewed);clearContent()" ng-hide = 'reviewNotFinished'>Finished</button>
     </div>
 </div>

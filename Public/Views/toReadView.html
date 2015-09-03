@@ -16,7 +16,7 @@
     </button>
     <div class='setRow'>
     <div class="bookImage"ng-repeat="book in toRead">
-        <p><img src='{{book.image}}' ng-dblclick="findAndDeleteBook(book)">
+        <p><img src='{{book.image}}' ng-dblclick="findAndDeleteBook(book)"></p>
         <p ng-if="book.price >= 0">${{book.price}}    
         </p>
         <div  ng-if = "book.price == undefined"> <p class="unavailable">Not available in ebook format</p>
