@@ -1,0 +1,33 @@
+<div class = "bookshelf"></div>
+<ul>
+        <li><a href="/#/home">Home</a></li>
+        <li><a href="/#/toReadView">To Read</a></li>
+        <li><a href="/#/haveRead">Have Read</a></li>
+        <li><a href="/#/favorites">Favorites</a></li>
+        <li><a href="/#/cartView">Cart</a></li>
+    </ul>
+<div class="header"><strong><h3>Have Read<h3></strong></div>
+    <div class = "textHeading"><h4>To add book to have read, enter title and author below<h4></div>
+    <!-- <button ng-click = "getAll()">Reload</button> -->
+    <input class = "inputField"  placeholder="Book Title" type="text" ng-model="title"></input>
+<input class = "inputField"  placeholder="author's name" type="text" ng-model="author"></input>
+<button class = "button" ng-click="searchForBook(title, author)">Submit
+</button>
+
+</div>
+<div class="setRow">
+<div class="bookImage" ng-repeat="book in haveRead" >
+    <!-- <p>{{book.title}}</p>
+    <p>{{book.author}}</p> -->
+    <!-- <p>{{book.review}}</p> -->
+    <p><img src='{{book.image}}' ng-dblclick="findAndDeleteBook(book)">
+    </p>
+    <p>{{book.review}}</p>
+    <div ng-init="rating = star.rating + book.rating"></div>
+    <div class="star-rating" star-rating rating-value="rating" data-max="5" on-rating-selected ="rateFunction(rating)">
+    <!-- {{rating}} -->
+    </div>
+</div>   
+</div>
+</div>
+<div ng-init="rating = star.rating + 1"></div>

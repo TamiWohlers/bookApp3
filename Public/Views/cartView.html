@@ -1,0 +1,29 @@
+
+<!-- <img class="bookshelf" src="http://i.istockimg.com/file_thumbview_approve/6822237/5/stock-photo-6822237-vintage-books.jpg"> -->
+<div class="bookshelf" flex></div>
+<ul>
+        <li><a href="/#/home">Home</a></li>
+        <li><a href="/#/toReadView">To Read</a></li>
+        <li><a href="/#/haveRead">Have Read</a></li>
+        <li><a href="/#/favorites">Favorites</a></li>
+        <li><a href="/#/cartView">Cart</a></li>
+    </ul>
+<div ><strong><h3>Shopping Cart</h3></strong>
+<p align="center">
+<div align="center" class="books"ng-repeat="book in booksInCart">
+  <div class="shoppingCart">
+	{{book.Title}} ${{book.Price}}
+	{{book.image}}
+	</div>
+	<div>
+	<button class="button" ng-click="deleteFromCart(book)">Delete</button>
+	</div>
+  </div>
+</p>
+<div class="total">
+Total = ${{total}}
+</div>
+<div></div>
+<!-- <div>{{total}}</div> -->
+<!-- -->
+<!-- <p>This is test<p> -->

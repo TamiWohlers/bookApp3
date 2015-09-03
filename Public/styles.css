@@ -1,0 +1,165 @@
+html {
+    font-family: 'Droid Sans', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSLF9uR9bTBkNRrcETZUde8GAcRxBd2P9gTMZXIltwyFuNznvLd');
+    font-size: 18px;
+}
+
+div.wrapper {
+    margin: 20px auto;
+    width: 350px;
+    background-color: #A296B4;
+}
+
+.bookshelf {
+    background-image: url("http://i.istockimg.com/file_thumbview_approve/6822237/5/stock-photo-6822237-vintage-books.jpg");
+    background-repeat: repeat-x;
+    height: 100px;
+}
+
+
+/*background-image:url("http://i.istockimg.com/file_thumbview_approve/6822237/5/stock-photo-6822237-vintage-books.jpg");
+ background-repeat: repeat-x;
+}*/
+
+input {
+    -webkit-appearance: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+a:link,
+a:visited {
+    display: block;
+    width: 250px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 1s ease-in-out;
+}
+
+a:hover,
+a:active {
+    background-color: #897F80;
+}
+
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+}
+
+ul.rating {
+    display: inline-block;
+}
+
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rating .filled {
+    color: blue;
+}
+
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.newUser {
+    background-color: #897F80;
+}
+
+.btn-primary {
+    font-weight: bold;
+}
+
+.facebookLogIn {}
+
+.unavailable {
+    color: red;
+    font-weight: italic;
+}
+
+.inputField {
+    font-size: 20px;
+}
+
+.books {
+    font-size: 20px;
+}
+
+.total {
+    font-size: 20px;
+}
+
+
+/*.ghost-button {
+      display: inline-block;
+      height:10px;
+      width: 10px;
+      /*padding: 8px;*/
+
+
+/*color: black;
+      border: 1px solid #fff;
+      text-align: center;
+      outline: none;
+      text-decoration: none;
+    }*/
+
+
+/*.ghost-button:hover,
+    .ghost-button:active {
+      background-color: #897F80;
+      color: #000;
+    }*/
+
+.button {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #666;
+  color:#000;
+  text-decoration:none;
+  background: #dcdcdc;
+  height: 30px;
+  width: 125px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.bookImage {
+    height: 300px;
+    width: 150px;
+    margin-top: 30px;
+}
+
+.setRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,0 +1,27 @@
+<div class="bookshelf"></div>
+<ul>
+    <li><a href="/#/home">Home</a></li>
+    <li><a href="/#/toReadView">To Read</a></li>
+    <li><a href="/#/haveRead">Have Read</a></li>
+    <li><a href="/#/favorites">Favorites</a></li>
+    <li><a href="/#/cartView">Cart</a></li>
+</ul>
+<div><strong><h3>Want to Read</h3></strong>
+    <div>
+        <h4>To add book to want to read, enter title and author below</h4></div>
+    <!-- <button ng-click = "getAll()">Reload</button> -->
+    <input class="inputField" placeholder="Book Title" type="text" ng-model="title"></input>
+    <input class="inputField" placeholder="author's name" type="text" ng-model="author"></input>
+    <button class="button"ng-click="searchForBook(title, author)">Submit
+    </button>
+    <div class='setRow'>
+    <div class="bookImage"ng-repeat="book in toRead">
+        <p><img src='{{book.image}}' ng-dblclick="findAndDeleteBook(book)">
+        <p ng-if="book.price >= 0">${{book.price}}    
+        </p>
+        <div  ng-if = "book.price == undefined"> <p class="unavailable">Not available in ebook format</p>
+        </div>
+        <div ng-if = "book.price >= 0">
+          <button  class="button" ng-click="buildCart(book)">Add to cart</button>
+        </div>
+    </div>
